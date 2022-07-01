@@ -16,13 +16,13 @@ The course, focused on four learning objectives:
 
 **Problem Statement: To Predict whether a person's income exceeds 50,000 dollars a year using the Adult Dataset(also known as Census Income Dataset).**
 
-## Task: Data Cleaning
+## Task 1: Data Cleaning
 
 - To account for the missing data, substituted all missing values by 0 using the Clean Missing Data module.
 - The next step is to use the Select Columns in the Dataset module to exclude irrelevant and redundant columns from the data. This is done to reduce the clutter during analysis. **fnlwgt, education-num** columns were removed from the dataset.
 - Creating the final set of features, and then using the Edit Metatdata module to convert the **workclass, education, marital-status, occupation, relationship, race, sex, native-country** columns from String types to Categorical Feature types.
 
-## Task: Accounting for Class Imbalance using SMOTE
+## Task 2: Accounting for Class Imbalance using SMOTE
 
 Before creating training and test sets(70:30), there is one last pre-processing step: dealing with class imbalance in the dataset.
 
@@ -36,7 +36,7 @@ Train two models. One model will be trained on the upsampled data(used SMOTE per
 
 Compare how both models perform and come to a conclusion about the efficacy of creating synthetic observations by upsampling the minority class.
 
-## Task: Training a Two-Class Boosted Decision Tree Model and Hyperparameter Tuning
+## Task 3: Training a Two-Class Boosted Decision Tree Model and Hyperparameter Tuning
 
 - Train a two-class boosted decision tree model to predict the income.
 
@@ -44,7 +44,7 @@ Compare how both models perform and come to a conclusion about the efficacy of c
 
 The parameter sweeps and training takes around 5 minutes to complete.
 
-## Task: Scoring and Evaluating the Models
+## Task 4: Scoring and Evaluating the Models
 
 Compare how the two models perform using the Score Model and Evaluate Model modules.
 
@@ -52,7 +52,7 @@ Use the AOC and ROC metrics to evaluate and diagnose your models.
 
 **Results: The model trained on upsampled data performs better and has a higher accuracy.**
 
-## Task: Publishing the Trained Model as a Web Service for Inference
+## Task 5: Publishing the Trained Model as a Web Service for Inference
 
 - Created a web service from an Azure Machine Learning prediction model that will allow us to make API queries using GET requests to perform inference on new data.
 
